@@ -1,0 +1,16 @@
+// path sep -- "\"
+const path = require("path");
+console.log(path.sep);
+
+// file path -- \content\subfolder\text.txt
+const filePath = path.join("/content", "subfolder", "text.txt");
+console.log(filePath);
+
+// base name -- if you just want to call the last part of the path
+const base = path.basename(filePath);
+console.log(base);
+
+// resolve -- absolute path that starts with the root of your file system
+// EXAMPLE: C:\Users\nativ\learnBackend\content\subfolder\test.txt
+const absolute = path.resolve(__dirname, "content", "subfolder", "test.txt");
+console.log(absolute);
